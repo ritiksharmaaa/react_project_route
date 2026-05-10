@@ -1,46 +1,63 @@
-import React from 'react'
 import { Link } from 'react-router-dom';
+import heroUrl from '../../assets/landing-hero.svg'
 
 export default function Home() {
     return (
-        <div className="mx-auto w-full max-w-7xl">
-            <aside className="relative overflow-hidden text-black rounded-lg sm:mx-16 mx-2 sm:py-16">
-                <div className="relative z-10 max-w-screen-xl px-4  pb-20 pt-10 sm:py-24 mx-auto sm:px-6 lg:px-8">
-                    <div className="max-w-xl sm:mt-1 mt-80 space-y-8 text-center sm:text-right sm:ml-auto">
-                        <h2 className="text-4xl font-bold sm:text-5xl">
-                            Download Now
-                            <span className="hidden sm:block text-4xl">Lorem Ipsum</span>
-                        </h2>
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+            <section className="grid items-center gap-10 py-12 lg:grid-cols-2 lg:py-20">
+                <div className="space-y-6">
+                    <p className="inline-flex items-center rounded-full bg-red-50 px-3 py-1 text-sm font-semibold text-red-700">
+                        Red &amp; white • Fast routes • Clean UI
+                    </p>
+                    <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">
+                        Route your React app with confidence.
+                    </h1>
+                    <p className="text-lg leading-relaxed text-gray-600">
+                        A simple, modern demo that shows nested routes, loaders, and clean page layouts — without
+                        the boilerplate.
+                    </p>
 
+                    <div className="flex flex-col gap-3 sm:flex-row">
                         <Link
-                            className="inline-flex text-white items-center px-6 py-3 font-medium bg-orange-700 rounded-lg hover:opacity-75"
-                            to="/"
+                            to="/about"
+                            className="inline-flex items-center justify-center rounded-lg bg-red-600 px-6 py-3 text-white font-semibold hover:bg-red-700 focus:ring-4 focus:ring-red-200"
                         >
-                            <svg
-                                fill="white"
-                                width="24"
-                                height="24"
-                                xmlns="http://www.w3.org/2000/svg"
-                                fillRule="evenodd"
-                                clipRule="evenodd"
-                            >
-                                <path d="M1.571 23.664l10.531-10.501 3.712 3.701-12.519 6.941c-.476.264-1.059.26-1.532-.011l-.192-.13zm9.469-11.56l-10.04 10.011v-20.022l10.04 10.011zm6.274-4.137l4.905 2.719c.482.268.781.77.781 1.314s-.299 1.046-.781 1.314l-5.039 2.793-4.015-4.003 4.149-4.137zm-15.854-7.534c.09-.087.191-.163.303-.227.473-.271 1.056-.275 1.532-.011l12.653 7.015-3.846 3.835-10.642-10.612z" />
-                            </svg>
-                            &nbsp; Download now
+                            Explore the demo
                         </Link>
+                        <Link
+                            to="/contact"
+                            className="inline-flex items-center justify-center rounded-lg border border-gray-200 bg-white px-6 py-3 text-gray-800 font-semibold hover:bg-gray-50 focus:ring-4 focus:ring-gray-200"
+                        >
+                            Contact us
+                        </Link>
+                    </div>
+
+                    <div className="grid grid-cols-1 gap-3 pt-2 text-sm text-gray-600 sm:grid-cols-3">
+                        <div className="rounded-lg border border-gray-100 bg-white p-3">
+                            <p className="font-semibold text-gray-900">Nested routes</p>
+                            <p className="mt-1">Clean layouts with <span className="font-mono">Outlet</span>.</p>
+                        </div>
+                        <div className="rounded-lg border border-gray-100 bg-white p-3">
+                            <p className="font-semibold text-gray-900">Route loaders</p>
+                            <p className="mt-1">Fetch before you render.</p>
+                        </div>
+                        <div className="rounded-lg border border-gray-100 bg-white p-3">
+                            <p className="font-semibold text-gray-900">Red theme</p>
+                            <p className="mt-1">A bold, consistent brand.</p>
+                        </div>
                     </div>
                 </div>
 
-                <div className="absolute inset-0 w-full sm:my-20 sm:pt-1 pt-12 h-full ">
-                    <img className="w-96" src="https://i.ibb.co/5BCcDYB/Remote2.png" alt="image1" />
+                <div className="relative">
+                    <div className="absolute -inset-6 rounded-3xl bg-red-50 blur-2xl" aria-hidden="true" />
+                    <img
+                        className="relative w-full rounded-3xl border border-red-100 bg-white p-3"
+                        src={heroUrl}
+                        alt="Routing illustration"
+                        loading="lazy"
+                    />
                 </div>
-            </aside>
-
-            <div className="grid  place-items-center sm:mt-20">
-                <img className="sm:w-96 w-48" src="https://i.ibb.co/2M7rtLk/Remote1.png" alt="image2" />
-            </div>
-
-            <h1 className="text-center text-2xl sm:text-5xl py-10 font-medium">Lorem Ipsum Yojo</h1>
+            </section>
         </div>
     );
 }
