@@ -7,14 +7,15 @@ export default function Home() {
             <section className="grid items-center gap-10 py-12 lg:grid-cols-2 lg:py-20">
                 <div className="space-y-6">
                     <p className="inline-flex items-center rounded-full bg-red-50 px-3 py-1 text-sm font-semibold text-red-700">
-                        Red &amp; white • Fast routes • Clean UI
+                        React Router v6 • Nested routes • Loaders
                     </p>
                     <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">
-                        Route your React app with confidence.
+                        React Router demo for real-world layouts.
                     </h1>
                     <p className="text-lg leading-relaxed text-gray-600">
-                        A simple, modern demo that shows nested routes, loaders, and clean page layouts — without
-                        the boilerplate.
+                        A simple, modern project that shows nested routes, loaders, and reusable layouts using
+                        {' '}
+                        <span className="font-mono">react-router-dom</span>.
                     </p>
 
                     <div className="flex flex-col gap-3 sm:flex-row">
