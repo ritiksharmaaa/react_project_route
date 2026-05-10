@@ -1,6 +1,5 @@
-import React, { Children } from 'react';
+import React from 'react';
 import ReactDOM  from 'react-dom/client';
-import App from './App.jsx';
 import './index.css';
 
 
@@ -15,7 +14,8 @@ import Contact from './components/Contact/Contact.jsx';
 import User from './components/User/User.jsx';
 import Error from './components/Error/Error'
 
-import Github , {githubInfoLoader}  from './components/Github/Github.jsx'
+import Github from './components/Github/Github.jsx'
+import { githubInfoLoader } from './components/Github/githubInfoLoader.js'
 
 
 
